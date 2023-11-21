@@ -1,7 +1,12 @@
-export default function Pizza() {
+export default function Pizza({ path, name, ingredients, price }) {
   return (
-    <>
-      <p>This should be a pizza element.</p>
-    </>
+    <li className="pizza">
+      <img src={path} alt={`Pizza ${name}`} />
+      <div>
+        <h3> {`Pizza ${name}`} </h3>
+        <p>{ingredients}</p>
+        <span>${price}</span>
+      </div>
+    </li>
   );
 }
