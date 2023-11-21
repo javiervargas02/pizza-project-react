@@ -50,7 +50,7 @@ export default function Menu() {
   return (
     <main className="menu">
       <h2>Our menu</h2>
-      {pizzas.length > 0 && (
+      {pizzas.length > 0 ? (
         <ul className="pizzas">
           {pizzas.map(({ name, ingredients, price, photoName }) => (
             <Pizza
@@ -62,6 +62,8 @@ export default function Menu() {
             />
           ))}
         </ul>
+      ) : (
+        <p>We're still working on our menu. Please come back later :)</p>
       )}
     </main>
   );
