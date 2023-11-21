@@ -1,3 +1,5 @@
+import Order from "../Order/Order";
+
 export default function Header() {
   const hour = new Date().getHours();
   const openHour = 12;
@@ -6,12 +8,12 @@ export default function Header() {
   return (
     <footer className="footer">
       {isOpen ? (
-        <div className="order">
-          <p>We're open until {openHour}:00. Come visit us or order online</p>
-          <button className="btn">Order</button>
-        </div>
-      ) : <p>We're happy to welcome you between {openHour}:00 and {closeHour}:00 :)</p>
-       }
+        <Order closeHour={closeHour} />
+      ) : (
+        <p>
+          We're happy to welcome you between {openHour}:00 and {closeHour}:00 :)
+        </p>
+      )}
     </footer>
   );
 }
