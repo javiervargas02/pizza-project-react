@@ -52,13 +52,10 @@ export default function Menu() {
       <h2>Our menu</h2>
       {pizzas.length > 0 ? (
         <ul className="pizzas">
-          {pizzas.map(({ name, ingredients, price, photoName }) => (
+          {pizzas.map((pizza) => (
             <Pizza
-              key={name}
-              name={name}
-              ingredients={ingredients}
-              price={price}
-              path={photoName}
+              key={pizza.name}
+              pizzaData={pizza}
             />
           ))}
         </ul>

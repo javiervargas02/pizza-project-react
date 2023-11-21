@@ -1,11 +1,11 @@
-export default function Pizza({ path, name, ingredients, price }) {
+export default function Pizza({ pizzaData }) {
   return (
     <li className="pizza">
-      <img src={path} alt={`Pizza ${name}`} />
+      <img src={pizzaData.photoName} alt={`Pizza ${pizzaData.name}`} />
       <div>
-        <h3> {`Pizza ${name}`} </h3>
-        <p>{ingredients}</p>
-        <span>${price}</span>
+        <h3> {`Pizza ${pizzaData.name}`} </h3>
+        <p>{pizzaData.ingredients}</p>
+        <span>${pizzaData.price}</span>
       </div>
     </li>
   );
